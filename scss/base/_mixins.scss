@@ -1,0 +1,65 @@
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-mos-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin flex-radius ($upperleft, $upperright, $lowerright, $lowerleft) {
+	-webkit-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
+	-mos-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
+	-ms-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
+	border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
+}
+
+@mixin  box-shadow ($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top, $left, $blur, $color;
+		-mos-box-shadow:inset $top, $left, $blur, $color;
+		-ms-box-shadow:inset $top, $left, $blur, $color;
+	box-shadow:inset $top, $left, $blur, $color;
+	} @else {
+		-webkit-box-shadow: $top, $left, $blur, $color;
+		-mos-box-shadow: $top, $left, $blur, $color;
+		-ms-box-shadow: $top, $left, $blur, $color;
+		box-shadow: $top, $left, $blur, $color;
+	}
+}
+
+@mixin transition($property, $duration, $method, $ms: false) {
+	-webkit-transition: $property $duration $method;
+	-moz-transition: $property $duration $method;
+	-o-transition: $property $duration $method;
+	@if ($ms) {
+		-ms-transition: $property $duration $method;
+	}
+	transition: $property $duration $method;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin rotate($val) {
+	@include transform(rotate($val));
+}
+
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin scale($x, $y) {
+	@include transform(scale($x, $y));
+}
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}

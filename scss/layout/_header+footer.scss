@@ -1,0 +1,163 @@
+.header {
+	background: #e4e4e4;
+	
+	img {
+		width: 100%; height: auto;
+	}
+}
+
+/* section wide */
+.section-wide {
+	border: 1px solid #ddd; padding: 40px; position: relative; z-index: 1; background: #fff; text-align: center;
+	
+	a {
+		color: $main-color; text-decoration: none;
+	}
+	
+	p {
+		text-align: center;
+	}
+	
+	#signupbtn {
+		background: $main-color; color: #fff;
+	}
+}
+
+/* footer up */
+.footer-up {
+	background: url("../img/black-wood-texture-15204.jpg") repeat; background-size: 100% 100%;
+	margin-top: -5%; padding-top: 8%;
+	
+	h4 {
+		color: #fff;
+	}
+	
+	.tags {
+		a {
+			background: transparent; border: 2px solid #fff; color: #fff; padding: 8px; display: inline-block; margin: 2px;
+			
+			&:hover {
+				background: $main-color; text-decoration: none;
+				
+				.glyphicon {
+					color: #fff;
+				}
+			}
+		}
+		
+		.glyphicon {
+			color: $main-color; margin-right: 5px;
+		}
+	}
+}
+
+.links ul {
+	list-style: none; padding-left: 0;
+	
+	a {
+		color: #fff; padding: 8px; display: inline-block; margin: 2px;
+		
+		.glyphicon {
+			color: $main-color; margin-right: 5px;
+		}
+	}
+}
+
+.flickr ul {
+	list-style: none; display: table; padding-left: 0;
+	
+	li {
+		width: 31%; display: inline-block; margin: 1px; border: 2px solid $main-color;
+		
+		img {
+			width: 100%; height: auto;
+		}
+	}
+}
+
+.social {
+	list-style: none; margin: 0 auto; margin-top: 30px; padding: 20px 0; text-align: center; border-top: 1px solid #626262;
+	
+	li {
+		margin: auto 15px; display: inline-block;
+		
+		div {
+			border-radius: 50%; background: #2c2c2c; height: 50px; width: 50px; transition: all .25s ease-in-out;
+			
+			a {
+				color: #fff;
+				
+				i {
+					font-size: 28px; line-height: 50px;
+				}
+			}
+		}
+		
+		&:hover {
+			a {
+				.email {
+					color: #b00;
+				}
+				
+				.google {
+					color: #dd4b39;
+				}
+				
+				.linkedin {
+					color: #1a85bc;
+				}
+			}
+			
+			div {
+				@include scale(-1, 1);
+			}
+		}
+	}
+}
+
+/* footer down*/
+.footer-down {
+	background: $main-color;
+	
+	p {
+		color: #fff;
+	}
+	
+	.nav-footer {
+		list-style: none; padding: 10px; text-align: right;
+		
+		li {
+			display: inline-block; margin-right: 10px;
+			
+			&:before {
+				content:"|"; color: #fff; margin-right: 10px;
+			}
+			
+			&:nth-child(1):before {
+				display: none;
+			}
+			
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+
+#scrolltotop {
+	border-radius: 50%; background: #ccc; height: 60px; width: 60px; opacity: 0.6; position: fixed; bottom: 30px; right: 30px; cursor: pointer; z-index: 99999; display: none;
+	
+	&:hover {
+		opacity: 1;
+	}
+	
+	i {
+		font-size: 40px; line-height: 60px; margin-left: 13px;
+	}
+}
+
+#menubar {
+	@extend #scrolltotop; right: auto; left: 30px;
+}

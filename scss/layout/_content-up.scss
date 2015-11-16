@@ -1,0 +1,81 @@
+/* content info */
+.content-info {
+	margin-top: -8%;
+}
+
+.contentinfo-left {
+	padding: 0;
+}
+
+.contentinfo-side {
+	padding: 0; background: #fff; @include flex-radius(5px, 5px, 0, 0); @include box-shadow(2px, 2px, 10px, $grey-color); text-align: center;
+	
+	.content-side {
+		padding: 5px;
+	}
+	
+	#bottom-link {
+		background: #88c425; width: 100%; padding: 10px; text-align: center;
+	}
+}
+
+.slide-tag {
+	position: absolute; bottom: 20px; left: 7px; background: $main-color;
+	
+	h4 {
+		color: #fff;
+	}
+}
+
+.org-panel {
+	background: #18191b;
+	
+	.org-item {
+		width: 40%; margin: 20px; background: #fff; border-right: 5px solid $main-color; padding: 0;
+		
+		.grandslam {
+			padding: 0;
+			
+			a {
+				text-decoration: none;
+				
+				img {
+					border-bottom: none;
+				}
+				
+				p {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+/* contentinfo right-side */
+#row {
+	position: relative;
+}
+
+.side-title {
+	background: $main-color; @include flex-radius(5px, 5px, 0, 0);
+	
+	h4 {
+		margin: 0; padding: 10px 20px; color: #fff; text-align: center;
+	}
+}
+
+.list-side {
+	padding-left: 12px; margin: 0;
+	
+	li {
+		list-style: none; display: inline-block;  margin-right: 10px;
+	}
+}
+
+#bottom-link a {
+	margin: 0; padding: 10px 20px; color: #fff; font-size: 18px;
+	
+	&:hover {
+		text-decoration: none; text-shadow: 2px solid $middle-grey;
+	}
+}
