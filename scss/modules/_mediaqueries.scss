@@ -61,12 +61,29 @@
 	
 	.menu {
 		display: none; position: fixed; top: 0; left: 0; right: 0;
-		
-		.navbar-nav {
-			margin: 0;
-			
-			li {
-				width: 49%;
+		.navbar-default {
+			.container {
+				.navcontroller {
+					.navbar-nav {
+						margin: 0;
+						
+						li {
+							width: 49%;
+							
+							#dropdown-div {
+								padding: 10px; @include abs-pos(100%, 0, auto, 0); @include box-shadow(0, 6px, 12px, rgba(0,0,0,.175)); border: 1px solid rgba(0,0,0,.15);
+								
+								.dropdown-item {
+									width: 100%;
+								}
+								
+								.dropdownimg {
+									display:none;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -85,20 +102,12 @@
 		margin-top: 0;
 	}
 	
-	.bg, .dropdownimg {
+	.bg {
 		display:none;
 	}
 	
 	.gallerytab {
 		border-top: none;
-	}
-	
-	.dropdown-item {
-		width: 100%;
-	}
-	
-	#dropdown-div {
-		padding: 10px; @include abs-pos(100%, 0, auto, 0); @include box-shadow(0, 6px, 12px, rgba(0,0,0,.175)); border: 1px solid rgba(0,0,0,.15);
 	}
 	
 	.mainslider-btn {
@@ -161,8 +170,6 @@
 		}
 	}
 	
-	#scrolltotop 
-	
 	#menubar {
 		@extend #scrolltotop; display: block;
 		
@@ -182,221 +189,221 @@
 	.ftslider-wrapper, .tags, .links, .flickr {
 		width: 100%;
 	}
-}
-
-@media only screen and (min-width: 481px) and (max-width: 639px) {
-	#mainslider {
-		.slideheading {
-			.slideheading1 {
-				&:after {
-					border-left: 18px solid $main-color; border-top: 18px solid transparent; border-bottom: 19px solid transparent;
+	}
+	
+	@media only screen and (min-width: 481px) and (max-width: 639px) {
+		#mainslider {
+			.slideheading {
+				.slideheading1 {
+					&:after {
+						border-left: 18px solid $main-color; border-top: 18px solid transparent; border-bottom: 19px solid transparent;
+					}
+					
+					h3 {
+						font-size: 16px;
+					}
 				}
 				
-				h3 {
-					font-size: 16px;
+				.slideheading3 {
+					@include abs-pos(80px, auto, auto, auto); display: none; width: 50%;
+					
+					p {
+						font-size: 12px;
+					}
+				}
+				
+				.slideheading2 {
+					@include abs-pos(40px, auto, auto, auto); display: none;
+					
+					h4 {
+						font-size: 16px;
+					}
 				}
 			}
+		}
+		
+		.content-info {
+			margin-top: 0;
+		}
+		
+		.imgoverlay img {
+			width: 100%; height: auto;
+		}
+		
+		/* big change on menu */
+		.header {
+			border-bottom: 3px solid $main-color;
+		}
+		
+		.menu {
+			display: none; position: fixed; top: 0; left: 0; right: 0;
+		}
+		
+		/* end of changes on menu */
+		
+		.nav-tabs {
+			background: #18191b;
+		}
+		
+		.tab-content {
+			box-shadow: 0 0 50px $grey-color;
+		}
+		
+		.gallery {
+			margin-top: 0;
+		}
+		
+		.bg {
+			display:none;
+		}
+		
+		.gallerytab {
+			border-top: none;
+		}
+		
+		.navbar-nav {
+			margin: 0;
+		}
+		
+		.navbar-nav>li {
+			width: 32%;
+		}
+		
+		.links {
+			position: relative; top: 5px;
+		}
+		
+		.tab-content-main {
+			padding: 30px 0 0 0; background: #f4f4f4;
+		}
+		
+		.filter-panel {
+			margin: -30px 0 0 0; padding-left: 0;
 			
-			.slideheading3 {
-				@include abs-pos(80px, auto, auto, auto); display: none; width: 50%;
-				
-				p {
-					font-size: 12px;
-				}
+			li {
+				margin-right: 0;
 			}
+		}
+		
+		.ftslider ol {
+			@include abs-pos(auto, auto, -40%, auto);
+		}
+		
+		#scrolltotop {
+			height: 40px; width: 40px;
 			
-			.slideheading2 {
-				@include abs-pos(40px, auto, auto, auto); display: none;
+			i {
+				font-size: 30px; line-height: 40px; margin-left: 7px;
+			}
+		}
+		
+		#menubar {
+			@extend #scrolltotop; display: block;
+			
+			i {
+				font-size: 25px; margin-left: 9px;
+			}
+		}
+		
+		.org-item {
+			width: 45%; margin: 5px;
+		}	
+	}
+	
+	@media only screen and (min-width: 640px) and (max-width: 767px) {
+		.gallery {
+			margin-top: 0;
+		}
+		
+		.bg {
+			display:none;
+		}
+		
+		.gallerytab {
+			border-top: none;
+		}
+		
+		.navbar-nav {
+			margin: 0;
+		}
+		
+		.links {
+			position: relative; top: 80px;
+		}
+		
+		.tab-content-main {
+			padding: 30px 0 0 0; background: #f4f4f4;
+		}
+		
+		.filter-panel {
+			margin: -30px 0 0 0; padding-left: 0;
+			
+			li {
+				margin-right: 0;
+			}
+		}
+		
+		.ftslider ol {
+			@include abs-pos(auto, auto, -15%, auto);
+		}
+	}
+	
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		.gallery, .news-panel {
+			position: relative; margin-top: -30%;
+		}
+		
+		.tab-content-main {
+			padding: 30px; background: #f4f4f4;
+		}
+		
+		.starimg {
+			padding: 0;
+		}
+	}
+	
+	@media only screen and (min-width: 992px) {
+		.gallery, .news-panel {
+			position: relative; margin-top: -20%;
+		}
+		
+		.tab-content-main {
+			padding: 30px; background: #f4f4f4;
+		}
+		
+		.contentinfo-side {
+			@include abs-pos(0, 0, 0, auto);
+		}
+		
+		.content-side {
+			@include abs-pos(50px, auto, 40px, auto);
+		}
+		
+		#bottom-link {
+			@include abs-pos(auto, auto, 0, auto); text-align: center;
+		}
+		
+		#mainslider {
+			.slideheading {
+				.slideheading1 {
+					padding: 10px 20px; @include abs-pos(0, auto, auto, auto); display: none;
+					
+					&:after {
+						border-left: 33px solid $main-color; border-top: 33px solid transparent; border-bottom: 33px solid transparent; 
+					}
+				}
 				
-				h4 {
-					font-size: 16px;
+				.slideheading2 {
+					@include abs-pos(86px, auto, auto, auto); display: none;
+					
+					h4 {
+						padding: 10px 10px 10px 0;
+					}
+				}
+				
+				.slideheading3 {
+					@include abs-pos(165px, auto, auto, auto); display: none;
 				}
 			}
 		}
-	}
-	
-	.content-info {
-		margin-top: 0;
-	}
-	
-	.imgoverlay img {
-		width: 100%; height: auto;
-	}
-	
-	/* big change on menu */
-	.header {
-		border-bottom: 3px solid $main-color;
-	}
-	
-	.menu {
-		display: none; position: fixed; top: 0; left: 0; right: 0;
-	}
-	
-	/* end of changes on menu */
-	
-	.nav-tabs {
-		background: #18191b;
-	}
-	
-	.tab-content {
-		box-shadow: 0 0 50px $grey-color;
-	}
-	
-	.gallery {
-		margin-top: 0;
-	}
-	
-	.bg {
-		display:none;
-	}
-	
-	.gallerytab {
-		border-top: none;
-	}
-	
-	.navbar-nav {
-		margin: 0;
-	}
-	
-	.navbar-nav>li {
-		width: 32%;
-	}
-	
-	.links {
-		position: relative; top: 5px;
-	}
-	
-	.tab-content-main {
-		padding: 30px 0 0 0; background: #f4f4f4;
-	}
-	
-	.filter-panel {
-		margin: -30px 0 0 0; padding-left: 0;
-		
-		li {
-			margin-right: 0;
-		}
-	}
-	
-	.ftslider ol {
-		@include abs-pos(auto, auto, -40%, auto);
-	}
-	
-	#scrolltotop {
-		height: 40px; width: 40px;
-		
-		i {
-			font-size: 30px; line-height: 40px; margin-left: 7px;
-		}
-	}
-	
-	#menubar {
-		@extend #scrolltotop; display: block;
-		
-		i {
-			font-size: 25px; margin-left: 9px;
-		}
-	}
-	
-	.org-item {
-		width: 45%; margin: 5px;
 	}	
-}
-
-@media only screen and (min-width: 640px) and (max-width: 767px) {
-	.gallery {
-		margin-top: 0;
-	}
-	
-	.bg {
-		display:none;
-	}
-	
-	.gallerytab {
-		border-top: none;
-	}
-	
-	.navbar-nav {
-		margin: 0;
-	}
-	
-	.links {
-		position: relative; top: 80px;
-	}
-	
-	.tab-content-main {
-		padding: 30px 0 0 0; background: #f4f4f4;
-	}
-	
-	.filter-panel {
-		margin: -30px 0 0 0; padding-left: 0;
-		
-		li {
-			margin-right: 0;
-		}
-	}
-	
-	.ftslider ol {
-		@include abs-pos(auto, auto, -15%, auto);
-	}
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	.gallery, .news-panel {
-		position: relative; margin-top: -30%;
-	}
-	
-	.tab-content-main {
-		padding: 30px; background: #f4f4f4;
-	}
-	
-	.starimg {
-		padding: 0;
-	}
-}
-
-@media only screen and (min-width: 992px) {
-	.gallery, .news-panel {
-		position: relative; margin-top: -20%;
-	}
-	
-	.tab-content-main {
-		padding: 30px; background: #f4f4f4;
-	}
-	
-	.contentinfo-side {
-		@include abs-pos(0, 0, 0, auto);
-	}
-	
-	.content-side {
-		@include abs-pos(50px, auto, 40px, auto);
-	}
-	
-	#bottom-link {
-		@include abs-pos(auto, auto, 0, auto); text-align: center;
-	}
-	
-	#mainslider {
-		.slideheading {
-			.slideheading1 {
-				padding: 10px 20px; @include abs-pos(0, auto, auto, auto); display: none;
-				
-				&:after {
-					border-left: 33px solid $main-color; border-top: 33px solid transparent; border-bottom: 33px solid transparent; 
-				}
-				}
-			
-			.slideheading2 {
-				@include abs-pos(86px, auto, auto, auto); display: none;
-				
-				h4 {
-					padding: 10px 10px 10px 0;
-				}
-			}
-			
-			.slideheading3 {
-				@include abs-pos(165px, auto, auto, auto); display: none;
-			}
-		}
-	}
-}

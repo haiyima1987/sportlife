@@ -6,23 +6,23 @@
 }
 
 @mixin flex-radius ($upperleft, $upperright, $lowerright, $lowerleft) {
-	-webkit-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
-	-mos-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
-	-ms-border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
-	border-radius: $upperleft, $upperright, $lowerright, $lowerleft;
+	-webkit-border-radius: $upperleft $upperright $lowerright $lowerleft;
+	-mos-border-radius: $upperleft $upperright $lowerright $lowerleft;
+	-ms-border-radius: $upperleft $upperright $lowerright $lowerleft;
+	border-radius: $upperleft $upperright $lowerright $lowerleft;
 }
 
 @mixin  box-shadow ($top, $left, $blur, $color, $inset: false) {
 	@if $inset {
-		-webkit-box-shadow:inset $top, $left, $blur, $color;
-		-mos-box-shadow:inset $top, $left, $blur, $color;
-		-ms-box-shadow:inset $top, $left, $blur, $color;
-	box-shadow:inset $top, $left, $blur, $color;
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-mos-box-shadow:inset $top $left $blur $color;
+		-ms-box-shadow:inset $top $left $blur $color;
+	box-shadow:inset $top $left $blur $color;
 	} @else {
-		-webkit-box-shadow: $top, $left, $blur, $color;
-		-mos-box-shadow: $top, $left, $blur, $color;
-		-ms-box-shadow: $top, $left, $blur, $color;
-		box-shadow: $top, $left, $blur, $color;
+		-webkit-box-shadow: $top $left $blur $color;
+		-mos-box-shadow: $top $left $blur $color;
+		-ms-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
 	}
 }
 

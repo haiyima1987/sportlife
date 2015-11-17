@@ -40,13 +40,13 @@
 									padding-left: 0;
 									
 									li {
-										list-style: none; border-bottom: 1px solid $grey-color; padding: 10px 0;
+										list-style: none; border-bottom: 1px solid $grey-color; padding: 10px 0; width: 100%; text-align: left;
 										
 										a {
-											color: $grey-color;
+											color: $grey-color; padding-left: 0;
 											
 											&:hover, &:focus {
-												color: $main-color; background-color: #fff; text-decoration: none;
+												color: $main-color; background-color: transparent; text-decoration: none;
 											}
 										}
 									}
@@ -58,7 +58,7 @@
 							padding: 0; @include border-radius(0);
 							
 							li {
-								border-bottom: 2px solid $main-color; position: relative;
+								border-bottom: 2px solid $main-color; position: relative; width: 100%; text-align: left;
 								
 								a {
 									padding-top: 10px; padding-bottom: 10px; color: $grey-color; cursor: pointer;
@@ -69,10 +69,10 @@
 								}
 								
 								ul {
-									position: absolute; left: 100%; top: 0; padding: 0; display: none; @include box-shadow(0, 6px, 12px, rgba(0,0,0,.175)); border: 1px solid rgba(0,0,0,.15);
+									@include abs-pos(0, auto, auto, 100%); padding: 0; display: none; @include box-shadow(0, 6px, 12px, rgba(0,0,0,.175)); border: 1px solid rgba(0,0,0,.15);
 									
 									li {
-										background: #fff; list-style: none; border-bottom: 2px solid $main-color;
+										background: #fff; list-style: none; border-bottom: 2px solid $main-color; width: 100%; text-align: left;
 										
 										a {
 											padding: 10px 20px; clear: both; font-weight: 400; color: $grey-color; white-space: nowrap; display: block;
@@ -97,22 +97,21 @@
 }
 
 /* nav tabs */
-.tab-content {
-	background: $dark-grey; padding: 15px; box-shadow: 0 0 10px #777;	
-}
-
 .nav-tabs {
 	border-bottom: none;
+	
+	li {
+		a {
+			background: #18191b; margin-right: 10px; color: #fff; border: none;
+			
+			&:focus, &:hover {
+				background: $main-color; color: #fff; border-bottom: none;
+			}
+		}
+	}
 }
 
+/* changes of bootstrap default settings */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	background: #88c425; color: #fff; border: 1px solid #88c425; border-bottom: none;
-}
-
-.nav-tabs>li>a {
-	background: #18191b; margin-right: 10px; color: #fff; border: none;
-}
-
-.nav>li>a:focus, .nav>li>a:hover {
-	background: #88c425; color: #fff; border-bottom: none;
+	background: $main-color; color: #fff; border: 1px solid $main-color; border-bottom: none;
 }

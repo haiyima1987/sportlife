@@ -39,7 +39,7 @@
 	height: 220px; position: relative;
 	
 	#readmore {
-		color: $main-color; position: absolute; right: 5px; bottom: 5px; font-size: 18px;
+		color: $main-color; @include abs-pos(auto, 5px, 5px, auto); font-size: 18px;
 	}
 	
 	h4, p {
@@ -84,6 +84,10 @@
 		label {
 			color: $grey-color;
 		}
+	}
+	
+	.comment-list {
+		list-style: none;
 	}
 }
 
@@ -132,7 +136,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 /* filter tabs */
 .filter-panel {
-	margin: 0 30px; list-style: none; border-bottom: 1px solid #ccc; text-align: center;
+	margin: -30px 0 30px; list-style: none; border-bottom: 1px solid #ccc; text-align: center;
 	
 	.active {
 		background: #88c425;
