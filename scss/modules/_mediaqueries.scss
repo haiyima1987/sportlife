@@ -303,7 +303,7 @@
 	}	
 }
 
-@media only screen and (min-width: 4640px) and (max-width: 767px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
 	.gallery {
 		margin-top: 0;
 	}
@@ -384,18 +384,18 @@
 				&:after {
 					border-left: 33px solid $main-color; border-top: 33px solid transparent; border-bottom: 33px solid transparent; 
 				}
-				
-				.slideheading2 {
-					@include abs-pos(86px, auto, auto, auto); display: none;
-					
-					h4 {
-						padding: 10px 10px 10px 0;
-					}
 				}
+			
+			.slideheading2 {
+				@include abs-pos(86px, auto, auto, auto); display: none;
 				
-				.slideheading3 {
-					@include abs-pos(165px, auto, auto, auto); display: none;
+				h4 {
+					padding: 10px 10px 10px 0;
 				}
+			}
+			
+			.slideheading3 {
+				@include abs-pos(165px, auto, auto, auto); display: none;
 			}
 		}
 	}

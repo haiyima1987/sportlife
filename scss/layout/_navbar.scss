@@ -103,16 +103,16 @@
 
 .nav-tabs {
 	border-bottom: none;
-	
-	li {
-		a:hover, a:focus {
-			background: $main-color; color: #fff; border: 1px solid $main-color; border-bottom: none;
-		}
-	}
-	
-	.active {
-		a {
-			background: $main-color; color: #fff; border: 1px solid $main-color; border-bottom: none;
-		}
-	}	
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	background: #88c425; color: #fff; border: 1px solid #88c425; border-bottom: none;
+}
+
+.nav-tabs>li>a {
+	background: #18191b; margin-right: 10px; color: #fff; border: none;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background: #88c425; color: #fff; border-bottom: none;
 }

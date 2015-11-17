@@ -422,18 +422,27 @@ h4 {
 .nav-tabs {
   border-bottom: none;
 }
+
 /* line 108, ../scss/layout/_navbar.scss */
-.nav-tabs li a:hover, .nav-tabs li a:focus, .nav-tabs .filter-panel li a:hover, .filter-panel .nav-tabs li a:hover {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .filter-panel .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:hover {
   background: #88c425;
   color: #fff;
   border: 1px solid #88c425;
   border-bottom: none;
 }
-/* line 114, ../scss/layout/_navbar.scss */
-.nav-tabs .active a {
+
+/* line 112, ../scss/layout/_navbar.scss */
+.nav-tabs > li > a {
+  background: #18191b;
+  margin-right: 10px;
+  color: #fff;
+  border: none;
+}
+
+/* line 116, ../scss/layout/_navbar.scss */
+.nav > li > a:focus, .filter-panel .nav > li > a:hover, .nav > li > a:hover {
   background: #88c425;
   color: #fff;
-  border: 1px solid #88c425;
   border-bottom: none;
 }
 
@@ -1603,7 +1612,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
     margin: 5px;
   }
 }
-@media only screen and (min-width: 4640px) and (max-width: 767px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
   /* line 307, ../scss/modules/_mediaqueries.scss */
   .gallery {
     margin-top: 0;
@@ -1730,8 +1739,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
     border-top: 33px solid transparent;
     border-bottom: 33px solid transparent;
   }
-  /* line 388, ../scss/modules/_mediaqueries.scss */
-  #mainslider .slideheading .slideheading1 .slideheading2 {
+  /* line 389, ../scss/modules/_mediaqueries.scss */
+  #mainslider .slideheading .slideheading2 {
     top: 86px;
     right: auto;
     bottom: auto;
@@ -1739,12 +1748,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
     position: absolute;
     display: none;
   }
-  /* line 391, ../scss/modules/_mediaqueries.scss */
-  #mainslider .slideheading .slideheading1 .slideheading2 h4 {
+  /* line 392, ../scss/modules/_mediaqueries.scss */
+  #mainslider .slideheading .slideheading2 h4 {
     padding: 10px 10px 10px 0;
   }
-  /* line 396, ../scss/modules/_mediaqueries.scss */
-  #mainslider .slideheading .slideheading1 .slideheading3 {
+  /* line 397, ../scss/modules/_mediaqueries.scss */
+  #mainslider .slideheading .slideheading3 {
     top: 165px;
     right: auto;
     bottom: auto;
